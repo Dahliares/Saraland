@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    background-color: gray;
+}
+button{
+    height: 140px;
+    width: 140px;
+}
+h1{
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    font-size: 50px;
+    color: aqua;
+}
+table{
+    margin: auto;
+    align-items: center;
+    border-collapse: collapse;
+}
