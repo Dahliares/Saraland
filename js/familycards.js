@@ -2,11 +2,16 @@ window.onload = function () {
 
 
 
-    var boton1 = document.getElementById("boton1");
-    boton1.addEventListener("click", function(){
-        this.innerHTML =  "caca";
-    }); 
+    var botones = document.getElementsByTagName("button");
 
+    for (let i = 0; i < botones.length; i++) {
+        const boton = botones[i];
+        boton.addEventListener("click", function(){
+            this.innerHTML = "holi";
+        
+        });
+    }
+ 
 
 
 }
