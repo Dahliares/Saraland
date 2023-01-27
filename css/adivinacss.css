@@ -1,8 +1,10 @@
 @charset "utf-8";
 
 /* CSS Document */
-html {
-    background-color: aquamarine;
+body {
+    background-color: darkblue;
+    flex-wrap: wrap;
+
 }
 
 header {
@@ -17,18 +19,24 @@ header {
 
 }
 
-#instrucciones {
+#instrucciones, #divboton, #divcaja {
+    display: flex;
+   
 
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-
+    
 }
 
 #cuerpo {
 
     text-align: center;
     margin-top: 10px;
+    display: block;
+    flex-direction: row;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+    justify-items: center;
 }
 
 #text {
@@ -47,8 +55,10 @@ header {
 
     font-size: 30px;
     background-color: green;
-    font-size: 30px;
-    margin-bottom: 10px;
+    height: 50px;
+
+    
+   
 }
 
 #cajaOculta {
@@ -57,20 +67,42 @@ header {
     height: 100px;
     background-color: orange;
     border: 5px solid red;
-    margin: auto;
-    margin-top: 20px;
+  
     color: yellow;
     font-size: 80px;
 }
 
-#resultado{
+#resultado {
     margin: auto;
     text-align: center;
     font-size: 50px;
     color: slateblue;
 }
 
-#form{
+#form {
     margin: auto;
     text-align: center;
+}
+
+#tabla {
+
+    margin-left: 20%;
+
+}
+
+
+
+.numeros {
+
+    height: 40px;
+    width: 80px;
+    margin: 1px;
+    padding: 1px;
+    border-radius: 5px;
+    border: 2px, solid, darkblue;
+    text-align: center;
+    color: black;
+    background-color: turquoise;
+    font-size: 30px;
+    font-weight: bold;
 }

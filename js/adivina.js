@@ -1,6 +1,33 @@
 window.onload = function () {
 
+//crear tabla
+var tabla = document.getElementById("tabla");
+var botones = 0;
+for (let i = 0; i < 10; i++) {
+    
+    var row = document.createElement("div");
+    row.setAttribute("row", i);
+    row.className = "row";
 
+    for (let j = 0; j < 10; j++) {
+        
+        //var celda = document.createElement("div");
+        var boton = document.createElement("button");
+        botones++;
+        boton.setAttribute("id", botones);
+        boton.className = "numeros";
+        boton.innerHTML = botones;
+        //celda.append(boton);
+        row.append(boton);
+
+    }
+    var br = document.createElement("br");
+    tabla.append(row);
+    tabla.append(br);
+
+}
+
+var contador = 0;
 var botonEmp = document.getElementById("botonEmp");
 botonEmp.addEventListener("click", empezarPartida);
 var botonOk = document.getElementById("botonOk");
@@ -29,11 +56,13 @@ function cargar() {
 }
 
 function empezarPartida() {
-
+    document.getElementById("cajaOculta").innerHTML = "?";
+    document.getElementById("resultado").innerHTML = "";
     var botonEmp = document.getElementById("botonEmp");
     botonEmp.disabled = true;
     var texto = document.getElementById("text");
     texto.disabled = false;
+    texto.value = "";
     var botonOk = document.getElementById("botonOk");
     botonOk.disabled = false;
 
@@ -60,12 +89,13 @@ function calcular() {
     if (numj < 1 || numj > 100) {
 
         salida.innerHTML = "ENTRE 1 Y 100";
+        contador++;
 
     } else {
 
         if (numj == numn) {
 
-            salida.innerHTML = "YOU WIN";
+            salida.innerHTML = "YOU WIN<br> Lo has conseguido en "+contador+ " intentos";
             var botonEmp = document.getElementById("botonEmp");
             botonEmp.disabled = false;
             var texto = document.getElementById("text");
@@ -73,16 +103,18 @@ function calcular() {
             var botonOk = document.getElementById("botonOk");
             botonOk.disabled = true;
             document.getElementById("cajaOculta").innerHTML = numNPC;
+
         }
         if (numj < numn) {
 
             salida.innerHTML = "NO NO, más alto!";
+            contador++;
 
         }
         if (numj > numn) {
 
             salida.innerHTML = "NO NO, más bajo!";
-
+            contador++;
 
         }
 
