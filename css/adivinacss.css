@@ -12,7 +12,7 @@ header {
     background-color: aqua;
     text-align: center;
     font-size: 30px;
-    
+    margin-bottom: 25px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border: 5px solid;
     border-color: blueviolet;
@@ -22,9 +22,17 @@ header {
 
 #instrucciones, #divboton, #divcaja {
     display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    
    
 
     
+}
+
+#divcaja{
+
+    align-items: center;
 }
 
 #cuerpo {
@@ -60,13 +68,16 @@ header {
    
 }
 
+
+
 #cajaOculta {
 
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     background-color: orange;
     border: 5px solid red;
-  
+   text-align: center;
+   vertical-align: middle;
     color: yellow;
     font-size: 80px;
 }
@@ -85,7 +96,7 @@ header {
 
 #tabla {
 
-  
+    
 
 }
 
@@ -93,16 +104,36 @@ header {
 
 .numeros {
 
-    height: 45px;
-    width: 80px;
+    height: 30px;
+    width: 45px;
     margin: 1px;
-    padding: 1px;
+    
     border-radius: 5px;
-    border: 2px, solid, darkblue;
+  
     text-align: center;
-    text-justify: distribute;
+
+    vertical-align: middle;
     color: black;
     background-color: turquoise;
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.borrado{
+
+    background-color: red;
+    text-decoration: line-through;
+    height: 30px;
+    width: 45px;
+    margin: 1px;
+    
+    border-radius: 5px;
+  
+    text-align: center;
+
+    vertical-align: middle;
+    color: black;
+    
+    font-size: 20px;
     font-weight: bold;
 }

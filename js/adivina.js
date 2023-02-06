@@ -1,6 +1,6 @@
 window.onload = function () {
 
-//crear tabla
+
 var tabla = document.getElementById("tabla");
 var botones = 0;
 for (let i = 0; i < 10; i++) {
@@ -15,17 +15,20 @@ for (let i = 0; i < 10; i++) {
         var boton = document.createElement("button");
         botones++;
         boton.setAttribute("id", botones);
-        boton.className = "btn-success numeros";
+        boton.className = "numeros teclas";
         boton.innerHTML = botones;
+        boton.addEventListener("click", calcular);
         //celda.append(boton);
         row.append(boton);
 
     }
-    var br = document.createElement("br");
+    //var br = document.createElement("br");
     tabla.append(row);
-    tabla.append(br);
+    //tabla.append(br);
 
 }
+
+
 
 var contador = 0;
 var botonEmp = document.getElementById("botonEmp");
@@ -33,7 +36,7 @@ botonEmp.addEventListener("click", empezarPartida);
 var botonOk = document.getElementById("botonOk");
 botonOk.addEventListener("click", calcular);
 
-var numNPC = 7;
+var numNPC;
 var numJUG = 0;
 var texto = document.getElementById("resultado");
 var form = getElementById("formulario");
@@ -56,6 +59,8 @@ function cargar() {
 }
 
 function empezarPartida() {
+   
+
     document.getElementById("cajaOculta").innerHTML = "?";
     document.getElementById("resultado").innerHTML = "";
     var botonEmp = document.getElementById("botonEmp");
@@ -66,10 +71,13 @@ function empezarPartida() {
     var botonOk = document.getElementById("botonOk");
     botonOk.disabled = false;
 
+    
+
 
     numNPC = Math.floor(Math.random() * 100) + 1;
 
-
+    var botones = document.getElementsByClassName("teclas");
+    botones.className="numeros teclas";
 
 
 }
@@ -78,12 +86,11 @@ function empezarPartida() {
 
 function calcular() {
 
-
+    this.className = "borrado";
 
     var numn = numNPC;
-    var numj = parseInt(document.getElementById("text").value);
+    var numj = parseInt(this.getAttribute("id"));
     var salida = document.getElementById("resultado");
-
 
 
     if (numj < 1 || numj > 100) {
