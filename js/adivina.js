@@ -15,7 +15,7 @@ for (let i = 0; i < 10; i++) {
         var boton = document.createElement("button");
         botones++;
         boton.setAttribute("id", botones);
-        boton.className = "numeros";
+        boton.className = "btn-success numeros";
         boton.innerHTML = botones;
         //celda.append(boton);
         row.append(boton);
