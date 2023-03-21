@@ -1,0 +1,19 @@
+.estil_bola {
+   font-family: 'Open Sans', 'Arial';
+   font-size: 200%;
+   font-weight: bold;
+   color: #800000;
+}
+
+.estil_frase {
+   font-family: 'Open Sans', 'Arial';
+   font-size: 150%;
+   font-weight: bold;
+   color: #800000;
+}
+
+.estil_llista {
+   font-family: 'Open Sans', 'Arial';
+   font-weight: bold;
+   color: #800000;
+}

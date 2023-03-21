@@ -1,0 +1,37 @@
+
+.container{
+
+    color: aliceblue;
+
+}
+
+#titulo{
+
+    text-align: center;
+    background-color: darkblue;
+}
+
+
+#map { 
+    height: 500px; 
+    width: 75%;
+    margin-left: 25px;
+   
+}
+
+p{
+    font-size: 25px;
+    color: aliceblue;
+}
+
+h3{
+    color: aqua;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    font-size: 40px;
+    background-color: aquamarine;
+    font-weight: bold;
+}

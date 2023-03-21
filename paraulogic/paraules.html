@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paraula</title>
+  <!-- Font Awesonme -->
+  <script src="https://kit.fontawesome.com/b614cfd257.js" crossorigin="anonymous"></script>
+  <!-- CSS de l'EAC -->
+  <link rel="stylesheet" type="text/css" href="css/paraules.css">
+
+  <!-- JS de l'EAC -->
+  <script type="text/javascript" src="js/paraules.js"></script>
+  
+</head>
+
+<body>
+  <h1>
+    <a href=""><img src="img/titol.png" width="220" height="54" class="logo" alt="ParaulIOCgic"></a>
+  </h1>
+  <div class="cursor-container">
+    <p id="input-word"> <span id="test-word"></span><span id="cursor" style="opacity: 0;">|</span></p>
+  </div>
+  <div class="container-hexgrid">
+    <ul id="hex-grid">
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link" draggable="false">
+            <p>c</p>
+          </a></div>
+      </li>
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link" draggable="false">
+            <p>d</p>
+          </a></div>
+      </li>
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link" draggable="false">
+            <p>e</p>
+          </a></div>
+      </li>
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link" draggable="false" id="center-letter">
+            <p>l</p>
+          </a></div>
+      </li>
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link no-pointer" draggable="false">
+            <p>i</p>
+          </a></div>
+      </li>
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link" draggable="false">
+            <p>o</p>
+          </a></div>
+      </li>
+      <li class="hex">
+        <div class="hex-in"><a class="hex-link" draggable="false">
+            <p>s</p>
+          </a></div>
+      </li>
+    </ul>
+    <div class="button-container">
+      <button id="delete-button" type="button" title="Suprimeix l'última lletra">Suprimeix</button>
+      <button id="save-button" type="button" class="icon" aria-label="Guardar"
+        title="Guardar">
+        <i class="fa-solid fa-floppy-disk"></i>
+      </button>
+      <button id="submit-button" type="button" title="Introdueix la paraula">Introdueix</button>
+    </div>
+  </div>
+  <div class="scoreboard">
+    <div id="definition"></div>
+    <div>Has trobat <span id="letters-found">0</span> <span id="found-suffix">paraules: </span><span
+        id="discovered-text"></span></div>
+  </div>
+
+  <script>
+    setInterval((function(){document.getElementById("cursor").style.opacity = (document.getElementById("cursor").style.opacity==1)?0:1}),600);
+  </script>
+</body>
+
+</html>

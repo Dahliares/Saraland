@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paraula</title>
+  <!-- Font Awesonme -->
+  <script src="https://kit.fontawesome.com/b614cfd257.js" crossorigin="anonymous"></script>
+  <!-- CSS de l'EAC -->
+  <link rel="stylesheet" type="text/css" href="css/formulari.css">
+
+  <!-- JS de l'EAC -->
+  <script type="text/javascript" src="js/formulari.js"></script>
+</head>
+
+<body>
+  <div id="game">
+    <header>
+      <div class="title">
+        <img src="img/titol.png" width="220" height="54" class="logo" alt="ParaulIOCgic">
+      </div>
+    </header>
+
+    <div id="form-container">
+      <!-- Introduïu aquí el vostre formulari -->
+
+      <form action="./paraules.html" id="form-container" method="get" name="formulario" onsubmit="return validar()">
+        <fieldset>
+          <legend>Login</legend>
+         
+          <label for="nombre">Nombre del Jugador:</label>
+          <input name="nombre" id="nombre" type="text" required placeholder="Tu nombre...">
+
+          <label for="pass">Contraseña:</label>
+          <input name="pass" id="pass" type="password" placeholder="Tu contraseña...">
+        </fieldset>
+
+       <fieldset>
+         <legend>Otros</legend>
+        
+         <label for="direccion">Dirección:</label>
+         <input name="direccion" id="direccion" type="text" placeholder="Tu dirección..." pattern="([A-Za-z ]{0,})+([,]{1})+([ ]{1})+([0-9][0-9])+([ ]{1})+([(]{1})+([A-Za-z]{3,10})+([)]{1})">
+        
+         <label for="edad">Edad:</label>
+         <input name="edad" id="edad" type="number" min="0" max="100" placeholder="Tu edad...">
+        
+         <label for="color">Color:</label>
+         <input name="color" list="colores" id="color" placeholder="Tu color favorito...">
+       </fieldset>
+
+        <datalist id="colores">
+          <option value="Azul">
+          <option value="Amarillo">
+          <option value="Verde">
+          <option value="Rosa">
+        </datalist>
+
+        <label for="robot">No soy un robot:</label>
+        <input name="robot" type="checkbox" id="robot">
+
+        <button id="submit" >INICIAR PARTIDA</button>
+       
+
+
+
+
+
+
+
+
+
+
+        <!-- <button>INICIAR PARTIDA</button> -->
+
+      </form>
+
+
+    </div>
+  </div>
+</body>
+
+</html>

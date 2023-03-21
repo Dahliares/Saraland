@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>JOC DE LA QUINA!</title>
+		<script src="js/exercici2.js"></script>
+      <link rel="stylesheet" href="css/exercici2.css">
+	</head>
+
+	<body onload="nova_partida()">
+	<h1>Joc de la QUINA</h1>
+	<p>
+      <button type="button" onclick="nova_partida()">Nova partida!</button>
+      <button type="button" onclick="nova_bola()">Nova bola!</button>
+	</p>
+	<hr>
+	<h2>Bola:</h2>
+	<p id="bola" class="estil_bola"></p>
+	<hr>
+	<h2>Frase lloro:</h2>
+	<p id="frase_lloro" class="estil_frase"></p>
+	<hr>
+	<h2>Frase públic:</h2>
+	<p id="frase_public" class="estil_frase"></p>
+	<hr>
+	<h2>Nombres cantats per ordre d'aparició:</h2>
+	<p id="nombres_cantats" class="estil_llista"></p>
+	<hr>
+	<h2>Nombres cantats de més petit a més gran:</h2>
+	<p id="nombres_ordenats" class="estil_llista"></p>
+	<hr>
+	<p>
+	   <button type="button" onclick="modificar_diccionari()">Modificar diccionari de frases</button>
+	</p>
+	</body>
+</html>
