@@ -1,0 +1,25 @@
+instalar node.js
+
+instalar sass:  npm install -g node-sass
+comprobar: node-sass --version
+
+Comandos
+--------
+
+Indicar el nombre de la carpeta sass donde estaran
+todos los arvhicos .scss y la carpeta donde debe crear 
+los .css compilados.
+
+node-sass --watch scss --output css
+
+watch quiere decir que se compilará automaticamente 
+cuando haya un cambio.
+
+Si no queremos que algun archivo scss se compile de forma 
+automatica le pondremos una _ delante, ej: _hola.scss
+
+
+VARIABLES
+--------
+
+Empiezan con $ ej:   $color : red;
