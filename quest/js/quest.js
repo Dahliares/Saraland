@@ -29,41 +29,8 @@ window.onload = function () {
         }
     }
 
-    //PAF INSERTAR MORT
-
-    var numAlea = (Math.floor(Math.random() * arrayDivs.length));
-    if (!arrayDivs[numAlea].hasChildNodes()) {  //comprobamos que el div no tiene contenido dentro ya
-        var elemntoMort = crearMort();
-          
-
-        arrayDivs[numAlea].appendChild(elemntoMort);   //div seccionat aleatoriament
-
-    }
-
-
-    //PAF BORDE AL DIV
-    var $casillasDiv = $('section div');
-    ///alert(arrayDivs.length);
-
-    for (let i = 0; i < arrayDivs.length; i++) {
-        const casilla = arrayDivs[i];
-
-        casilla.mouseenter(function () {
-            casilla.css("border", "4px dotted purple");
-        });
-        casilla.mouseleave(function () {
-            casilla.css("border", "");
-        });
-
-    };
-
-
-
-
-
-
-
-
+   
+   
 
     //insertamos monedas sin Jquery-----------------------------------------------------------------
 
@@ -218,19 +185,8 @@ window.onload = function () {
         } else if (casilladestino.firstChild.className == "portal") {
 
             portal(casillaActual);
-
-            //PAF ---------------
-        } else if (casilladestino.firstChild.attr("efecto") == "mort"){
-
-            //eliminamos el contenido de la casilla mort
-            $(casilladestino).firstChild.remove();
-            $("#numVides").text = vidasActuales / 2;
-            $("#numMonedes").text = monedasActuales / 2;
-
-
-
+          
         }
-
 
 
     }
@@ -339,21 +295,7 @@ window.onload = function () {
     }
 
 
-    //PAF
-    function crearMort() {
-
-        var mort = document.createElement('span');
-        mort.setAttribute("efecte","mort");
-        
-
-        var morti = document.createElement('i');
-        morti.className = "fa-solid fa-book-skull fa-2x1";
-
-        mort.appendChild(morti);
-
-        return mort;
-
-    }
+   
 
 
 

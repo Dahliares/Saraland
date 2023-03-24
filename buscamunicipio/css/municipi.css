@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Spray+Paint&display=swap');
+
+body, html{
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.container{
+
+    color: aliceblue;
+
+}
+
+#quilometres{
+    text-align: center;
+}
+
+#lateral{
+    padding:1rem;
+    margin:0 auto;
+    background-color:rgba(255,255,255,0.5);
+}
+
+#lateral h3{
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bolder;
+}
+
+#titol{
+    text-align: center;
+    color:black;
+    background-image:url("https://www.shutterstock.com/image-vector/long-city-street-various-urban-260nw-328377722.jpg");
+}
+
+#titol h1{
+    font-family: 'Rubik Spray Paint', cursive;
+}
+
+#titol p{
+    font-weight: bolder;
+}
+
+#map { 
+    height: 500px; 
+    width: 75%;
+    margin-left: 25px;
+   
+}
+
+p{
+    font-size: 25px;
+    color: black;
+}
+
+h3{
+    color: aqua;
+    text-align: center;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    font-size: 40px;
+    font-weight: bolder;
+    background-color: aquamarine;
+}

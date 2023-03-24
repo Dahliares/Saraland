@@ -1,22 +1,49 @@
-h1{
-font-family: 'Courier New', Courier, monospace;
-border: 10px solid purple;
-background-color: cornflowerblue;
-padding: 20px;
-font-size: 50px;
+
+h1, h2{
+
+    font-family: 'Titan One', cursive;
+    
+    
 }
 
-h2{
+h2 {
     text-align: center;
     font-size: 30px;
-    color: bisque;
-}
-body{
+    color: turquoise;
+    height: 70px;
     background-color: black;
+    justify-content: center;
+    padding-top: 15px;
 }
-li{
+
+li {
     font-size: 20px;
     color: turquoise;
     padding: 5px;
+
+}
+
+
+img {
+    margin-top: 15px;
+    height: 150px;
+
+}
+
+.card {
+
+margin: 5px;
+}
+
+#cuerpo{
     
+    background-color: black;
+}
+
+body, html{
+    background-color: black;
+}
+
+.container-fluid{
+    background-color: black;
 }
