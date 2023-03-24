@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<title>JOC DE LA QUINA!</title>
-		<script src="js/exercici2.js"></script>
-      <link rel="stylesheet" href="css/exercici2.css">
-	</head>
 
-	<body onload="nova_partida()">
-	<h1>Joc de la QUINA</h1>
-	<p>
-      <button type="button" onclick="nova_partida()">Nova partida!</button>
-      <button type="button" onclick="nova_bola()">Nova bola!</button>
-	</p>
-	<hr>
-	<h2>Bola:</h2>
-	<p id="bola" class="estil_bola"></p>
-	<hr>
-	<h2>Frase lloro:</h2>
-	<p id="frase_lloro" class="estil_frase"></p>
-	<hr>
-	<h2>Frase públic:</h2>
-	<p id="frase_public" class="estil_frase"></p>
-	<hr>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>JOC DE LA QUINA!</title>
+	<script src="js/exercici2.js"></script>
+	<link rel="stylesheet" href="css/exercici2.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+</head>
+
+<body onload="nova_partida()">
+
+
+	<div class="bg-image p-5 text-center shadow-1-strong text-white"
+		style="background-image: url('../img/img-bingo.jpg'); background-repeat: no-repeat;">
+
+		<h1>JOC DE LA QUINA</h1>
+
+	</div>
+	<div class=" container-fluid mt-5">
+		<div class="row">
+			<div class="col">
+				<div id="botones">
+					<button style="background-color: violet" onclick="nova_partida()">Nova partida!</button>
+					<button onclick="nova_bola()">Nova bola!</button>
+					<h2>Bola:</h2>
+
+					<div class="contenedor">
+						<img id="bola-img" src="../img/bola.png" />
+
+						<div class="centrado">
+							<p id="bola" class="estil_bola"></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="col">
+				<h2>Frase lloro:</h2>
+				<p id="frase_lloro" class="estil_frase"></p>
+				<hr>
+				<h2>Frase públic:</h2>
+				<p id="frase_public" class="estil_frase"></p>
+			</div>
+		</div>
+	</div>
+
+
+
 	<h2>Nombres cantats per ordre d'aparició:</h2>
 	<p id="nombres_cantats" class="estil_llista"></p>
 	<hr>
@@ -30,7 +59,14 @@
 	<p id="nombres_ordenats" class="estil_llista"></p>
 	<hr>
 	<p>
-	   <button type="button" onclick="modificar_diccionari()">Modificar diccionari de frases</button>
+		<button type="button" onclick="modificar_diccionari()">Modificar diccionari de frases</button>
 	</p>
-	</body>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -2,7 +2,7 @@
    font-family: 'Open Sans', 'Arial';
    font-size: 200%;
    font-weight: bold;
-   color: #800000;
+   color: black;
 }
 
 .estil_frase {
@@ -16,4 +16,55 @@
    font-family: 'Open Sans', 'Arial';
    font-weight: bold;
    color: #800000;
+}
+
+h1{
+
+   background-color: black;
+   color: blueviolet;
+   display:inline;
+   font-family: 'Titan One', cursive;
+   
+}
+
+button{
+
+   font-family: 'Titan One', cursive;
+   font-size: 100px;
+   height: 100px;
+   width: 150px;
+   background-color: springgreen;
+   border-radius: 15px;
+   border-color: yellowgreen;
+   
+
+}
+
+#botones{
+
+   text-align: center;
+
+}
+
+.contenedor{
+   position: relative;
+   display: inline-block;
+   text-align: center;
+}
+.texto-encima{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+.centrado{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#bola-img{
+
+   height: 150px;
+   width: 150px;
 }
