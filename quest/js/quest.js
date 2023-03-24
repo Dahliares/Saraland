@@ -53,12 +53,7 @@ window.onload = function () {
     boton[0].addEventListener("click", cambiarPersonaje);;
 
     function cambiarPersonaje() {
-        //PAF-----------
-        var codi = prompt("inserta el codigo");
-
-        var patron = /[ON|OFF].{3,6}$$/;
-
-        if (patron.test(codi)) {
+        
             //SI VA TODO BIEN HACEMOS EL CAMBIO DE PERSONAJE
           var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
         var imagen = personaje.firstChild;
@@ -70,8 +65,7 @@ window.onload = function () {
         } else if (atributo == "img/personatge2.png") {
             imagen.src = "img/personatge1.png";
         }  
-        }
-
+        
         
     }
 
@@ -229,6 +223,7 @@ window.onload = function () {
 
     function portal(casillaActual) {  //gestionamos la entrada al portal
 
+        
         casillaActual.firstChild.remove(); //borramos el moñeco
 
         var monedasActuales = parseInt(document.getElementById("numMonedes").textContent);
