@@ -224,7 +224,9 @@ window.onload = function () {
     function portal(casillaActual) {  //gestionamos la entrada al portal
 
         
-        casillaActual.firstChild.remove(); //borramos el moñeco
+        casillaActual.firstChild.remove(); 
+        //borramos el moñeco
+
 
         var monedasActuales = parseInt(document.getElementById("numMonedes").textContent);
         var record = parseInt(localStorage.getItem("monedas"));  //comprobamos si hay record anterior
@@ -244,6 +246,8 @@ window.onload = function () {
             window.location.reload()
 
         }
+
+        
 
     }
 

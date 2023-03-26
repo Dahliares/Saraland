@@ -1,27 +1,17 @@
 
-h1, h2{
+#titulo{
 
-    font-family: 'Titan One', cursive;
-    
-    
-}
-
-h2 {
-    text-align: center;
-    font-size: 30px;
-    color: turquoise;
-    height: 70px;
     background-color: black;
-    justify-content: center;
-    padding-top: 15px;
-}
-
-li {
-    font-size: 20px;
-    color: turquoise;
-    padding: 5px;
+    
 
 }
+
+h1{
+
+    font-size: xx-large;
+    font-family: monospace;
+}
+
 
 
 img {
@@ -32,20 +22,10 @@ img {
 
 }
 
-.card {
+body{
 
-margin: 5px;
+    background-image: url(../img/img-aurora.jpg);
 }
 
-#cuerpo{
-    
-    background-color: black;
-}
 
-body, html{
-    background-color: black;
-}
 
-.container-fluid{
-    background-color: black;
-}
