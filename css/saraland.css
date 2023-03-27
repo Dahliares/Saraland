@@ -1,20 +1,16 @@
 
-#titulo{
 
-    background-color: black;
-    
-
-}
 
 h1{
 
     font-size: xx-large;
     font-family: monospace;
+    
 }
 
 
 
-img {
+.card img {
     margin-top: 15px;
     height: 150px;
     border: 2px double cyan;

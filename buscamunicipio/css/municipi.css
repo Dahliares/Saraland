@@ -6,26 +6,21 @@ body, html{
     font-family: 'Montserrat', sans-serif !important;
 }
 
-.container{
-
-    color: aliceblue;
-
-}
 
 #quilometres{
     text-align: center;
+    margin-top: 20px;
+    color: aliceblue; 
+    font-size: xx-large
 }
 
 #lateral{
     padding:1rem;
     margin:0 auto;
-    background-color:rgba(255,255,255,0.5);
+    background-color: darkmagenta;
+    border-radius: 10px;
 }
 
-#lateral h3{
-    background-color: rgba(0,0,0,0.5);
-    font-weight: bolder;
-}
 
 #titol{
     text-align: center;
@@ -53,15 +48,26 @@ p{
     color: black;
 }
 
-h3{
-    color: aqua;
-    text-align: center;
-}
+
 
 button{
     height: 50px;
     width: 100px;
-    font-size: 40px;
-    font-weight: bolder;
-    background-color: aquamarine;
+   
+}
+
+#municipi{
+
+    background-color: slateblue;
+    color: aquamarine;
+    text-align: center;
+    font-weight:bold;
+    
+
+}
+
+body{
+
+    background: radial-gradient( slateblue, pink);  
+    background: gra;
 }

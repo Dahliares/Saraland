@@ -8,3 +8,56 @@ h1{
 
     background-image: url(../../img/img-question.jpg);
 }
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+ }
+ .texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+ }
+ .centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+ #cubo-img{
+
+    height: 300px;
+    width: 300px;
+ }
+
+ #bola{
+
+    font-size: 200px;
+    font-weight: bolder;
+ }
+
+ #enunciado{
+
+    font-family: cursive;
+    font-size: 30px;
+ }
+
+ .botones{
+
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    background-color: aqua;
+    margin: 5px;
+
+ }
+
+ #pistas{
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+ }

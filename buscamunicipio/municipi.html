@@ -31,7 +31,8 @@
 
 </head>
 
-<body style="background-color:darkblue">
+<body>
+
     <div  class="container">
         <div id="titol">
             <h1>TROBA EL MUNICIPI</h1>
@@ -42,21 +43,24 @@
 
     </div>
 
-    <div class="row">
+    <div class="container-fluid mt-5">
+        <div class="row">
+            
         
-
-        <div id="map" class="col-sm-8">
-
-        </div>
-
-        <div id="lateral" class="col-sm-3">
-           <button id="jugar">Jugar</button>
-           <button id="reiniciar">Reiniciar</button>
-           <button id="rendeixo">Me rindo</button>
-           <p>Municipi a cercar:</p>
-           <h3 id="municipi"></h3>
-           <p id="quilometres"></p>
-           
+            <div id="map" class="col-sm-8 rounded-circle">
+        
+            </div>
+        
+        
+            <div id="lateral" class="col-sm-3 text-center">
+               <button class="btn-success" id="jugar">Jugar</button>
+               <button class="btn-primary" id="reiniciar">Reiniciar</button>
+               <button class="btn-warning" id="rendeixo">Me rindo</button>
+               <p>Municipi a cercar:</p>
+               <p id="municipi"></p>
+               <p id="quilometres"></p>
+               
+            </div>
         </div>
     </div>
 
