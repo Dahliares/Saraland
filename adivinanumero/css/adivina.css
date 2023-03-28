@@ -1,11 +1,8 @@
 h1{
-
     font-family: fantasy;
-
 }
 
 #titulo{
-
     background-image: url(../../img/img-question.jpg);
 }
 
@@ -14,12 +11,13 @@ h1{
     display: inline-block;
     text-align: center;
  }
+
  .texto-encima{
     position: absolute;
     top: 10px;
-    left: 10px;
-    
+    left: 10px;  
  }
+
  .centrado{
     position: absolute;
     top: 50%;
@@ -28,36 +26,61 @@ h1{
  }
 
  #cubo-img{
-
     height: 300px;
     width: 300px;
  }
 
- #bola{
-
+ #caja{
     font-size: 200px;
     font-weight: bolder;
+    color: blue;
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+    
  }
 
  #enunciado{
-
     font-family: cursive;
     font-size: 30px;
  }
 
  .botones{
-
     width: 60px;
     height: 40px;
     text-align: center;
-    background-color: aqua;
+    background-color: orange;
     margin: 5px;
-
+    font-size: 25px;
+    font-weight: bold;
  }
 
  #pistas{
-
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     margin-top: 10px;
+    height: 100px;
  }
+
+ .clicado{
+
+    background-color: slategrey;
+    text-decoration: line-through;
+ }
+
+ .botones:hover{
+
+    background-color: yellow;
+ }
+
+ /* The animation code */
+@keyframes animation {
+    0%   {color:red; }
+    25%  {color:greenyellow; }
+    50%  {color:blue; }
+    75%  {color:slateblue; }
+    100% {color:red;}
+  }
+  
+ 

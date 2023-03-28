@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Municipis</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- JQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -15,8 +18,8 @@
     <link rel="stylesheet" type="text/css" href="css/municipi.css">
 
     <!-- Bootstrap de l'exercici -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- JS de l'exercici -->
     <script src="js/municipi.js"></script>
@@ -33,10 +36,11 @@
 
 <body>
 
-    <div  class="container">
+    <div class="container">
         <div id="titol">
             <h1>TROBA EL MUNICIPI</h1>
-            <p>Posa't a prova cercant la localització d'un municipi proposat aleatòriament en el menor nombre d'intents possible.
+            <p>Posa't a prova cercant la localització d'un municipi proposat aleatòriament en el menor nombre d'intents
+                possible.
             </p>
 
         </div>
@@ -45,21 +49,21 @@
 
     <div class="container-fluid mt-5">
         <div class="row">
-            
-        
+
+
             <div id="map" class="col-sm-8 rounded-circle">
-        
+
             </div>
-        
-        
+
+
             <div id="lateral" class="col-sm-3 text-center">
-               <button class="btn-success" id="jugar">Jugar</button>
-               <button class="btn-primary" id="reiniciar">Reiniciar</button>
-               <button class="btn-warning" id="rendeixo">Me rindo</button>
-               <p>Municipi a cercar:</p>
-               <p id="municipi"></p>
-               <p id="quilometres"></p>
-               
+                <button class="btn-success" id="jugar">Jugar</button>
+                <button class="btn-primary" id="reiniciar">Reiniciar</button>
+                <button class="btn-warning" id="rendeixo">Me rindo</button>
+                <p>Municipi a cercar:</p>
+                <p id="municipi"></p>
+                <p id="quilometres"></p>
+
             </div>
         </div>
     </div>
