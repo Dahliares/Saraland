@@ -80,6 +80,9 @@ window.onload = function () {
     function moverAbajo() {
 
         $casillaActual = $(".personatge").parent();   //div actual donde esta el muñeco
+        
+        var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
+        personaje.firstChild.src = "img/link3.png";
 
         if ($casillaActual.parent().next().is("section")) {  //verificamos que haya casilla siguiente
 
@@ -107,6 +110,9 @@ window.onload = function () {
 
         $casillaActual = $(".personatge").parent();
 
+        var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
+        personaje.firstChild.src = "img/link1.png";
+
         if ($casillaActual.parent().prev().is("section")) {  //verificamos que haya casilla previa
 
             //averiguamos cuantos hermano tiene delante para saber que nº de hijo es dentro del section
@@ -132,6 +138,9 @@ window.onload = function () {
 
     function moverDerecha() {
 
+        var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
+        personaje.firstChild.src = "img/link2.png";
+
         var casillaActual = document.getElementsByClassName("personatge")[0].parentNode;
         var casilladestino = casillaActual.nextElementSibling;
 
@@ -150,6 +159,9 @@ window.onload = function () {
 
     function moverIzquierda() {
 
+        var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
+        personaje.firstChild.src = "img/link4.png";
+
         var casillaActual = document.getElementsByClassName("personatge")[0].parentNode;
         var casilladestino = casillaActual.previousElementSibling;
 
@@ -163,7 +175,7 @@ window.onload = function () {
     function accion(casilladestino, casillaActual) {
 
         if (!casilladestino.hasChildNodes()) {   //si la casilla destino está vacía movemos el muñeco
-
+            
             casilladestino.append(casillaActual.firstChild.cloneNode(true)); //copiamos el contenido (muñeco) de la casilla actual a la destino
             casillaActual.firstChild.remove(); //borramos la casilla actual que ahora queda vacía
 
@@ -258,7 +270,7 @@ window.onload = function () {
         muñecoSpan.className = "personatge";
 
         var muñecoImg = document.createElement('img');
-        muñecoImg.src = "img/personatge1.png";
+        muñecoImg.src = "img/link2.png";
 
         muñecoSpan.appendChild(muñecoImg);
 

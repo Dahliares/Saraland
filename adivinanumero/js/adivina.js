@@ -45,6 +45,7 @@ window.onload = function () {
 
 
         if (numClicado == randomNum) {
+            contador++;
             let winner = ' <i class="fa-solid fa-trophy fa-xl"></i> ';
             salida.innerHTML = "YOU WIN!!!"+winner + "<br> Lo has conseguido en " + contador + " intentos";
             document.getElementById("caja").innerHTML = randomNum;
