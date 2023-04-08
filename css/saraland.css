@@ -1,12 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/mixoutline');
+@import url('https://fonts.cdnfonts.com/css/berenika');
 
+                
 
+#titulo{
 
-h1{
-
-    font-size: xx-large;
-    font-family: monospace;
-    
+    font-size: 150px;
+    font-family: 'MixOutline', sans-serif;
+    height: 170px;
 }
+
 
 
 
@@ -21,7 +24,12 @@ h1{
 body{
 
     background-image: url(../img/img-aurora.jpg);
+   
+                                                
 }
 
+h2{
+font-family: 'berenika', sans-serif;
+}
 
 

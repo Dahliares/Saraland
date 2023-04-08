@@ -54,13 +54,13 @@ window.onload = function () {
         if (numClicado < randomNum) {
             let upArrow = ' <i class="fa-solid fa-arrow-up"></i> ';
            // llistat.innerHTML += '<p onclick="seleccionar(' + pos + ')" class="no-seleccionat" id="' + pos + '">' + persona_actual.nom_complet + '</p>';
-            salida.innerHTML =  "NO, NO, más alto! " + upArrow + upArrow;
+            salida.innerHTML =  "NO, NO, más alto! <br>" + upArrow + upArrow;
             contador++;
 
         }
         if (numClicado > randomNum) {
             let downArrow = ' <i class="fa-solid fa-arrow-down"></i> ';
-            salida.innerHTML = "NO NO, más bajo! " + downArrow + downArrow;
+            salida.innerHTML = "NO NO, más bajo! <br>" + downArrow + downArrow;
             contador++;
 
         }
