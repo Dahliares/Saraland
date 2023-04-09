@@ -1,5 +1,7 @@
 window.onload = function () {
 
+
+
     //insertamos personaje con Jquery------------------------------------------------------------
 
     var $casilla = $('section:first-Child div:first-Child'); //primer div del primer section
@@ -29,8 +31,8 @@ window.onload = function () {
         }
     }
 
-   
-   
+
+
 
     //insertamos monedas sin Jquery-----------------------------------------------------------------
 
@@ -53,9 +55,9 @@ window.onload = function () {
     boton[0].addEventListener("click", cambiarPersonaje);;
 
     function cambiarPersonaje() {
-        
-            //SI VA TODO BIEN HACEMOS EL CAMBIO DE PERSONAJE
-          var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
+
+        //SI VA TODO BIEN HACEMOS EL CAMBIO DE PERSONAJE
+        var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
         var imagen = personaje.firstChild;
         var atributo = imagen.getAttribute('src');  //sacamos el valor del atributo src actual
 
@@ -64,9 +66,9 @@ window.onload = function () {
             imagen.src = "img/personatge2.png";
         } else if (atributo == "img/personatge2.png") {
             imagen.src = "img/personatge1.png";
-        }  
-        
-        
+        }
+
+
     }
 
 
@@ -80,7 +82,7 @@ window.onload = function () {
     function moverAbajo() {
 
         $casillaActual = $(".personatge").parent();   //div actual donde esta el muñeco
-        
+
         var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
         personaje.firstChild.src = "img/link3.png";
 
@@ -175,7 +177,7 @@ window.onload = function () {
     function accion(casilladestino, casillaActual) {
 
         if (!casilladestino.hasChildNodes()) {   //si la casilla destino está vacía movemos el muñeco
-            
+
             casilladestino.append(casillaActual.firstChild.cloneNode(true)); //copiamos el contenido (muñeco) de la casilla actual a la destino
             casillaActual.firstChild.remove(); //borramos la casilla actual que ahora queda vacía
 
@@ -191,7 +193,7 @@ window.onload = function () {
         } else if (casilladestino.firstChild.className == "portal") {
 
             portal(casillaActual);
-          
+
         }
 
 
@@ -208,8 +210,23 @@ window.onload = function () {
 
         }
         if (vidasActuales == 0) {
-            alert("HAS PERDIDO! Vuelve a empezar");
-            window.location.reload()
+            //alert("HAS PERDIDO! Vuelve a empezar");
+            Swal.fire({
+                imageUrl: 'img/linklose.gif',
+                imageHeight: 150,
+                imageAlt: 'link',
+                title: 'HAS PERDIDO!',
+                text: "Vuelve a empezar y mira por donde andas!",
+               
+            }).then((result) => {
+                if (result.value) {
+
+                    window.location.reload();
+
+                }
+            });
+
+           
         }
 
     }
@@ -235,8 +252,8 @@ window.onload = function () {
 
     function portal(casillaActual) {  //gestionamos la entrada al portal
 
-        
-        casillaActual.firstChild.remove(); 
+
+        casillaActual.firstChild.remove();
         //borramos el moñeco
 
 
@@ -246,20 +263,62 @@ window.onload = function () {
         if (Number.isNaN(record) || monedasActuales > record) {
 
             localStorage.setItem("monedas", monedasActuales);  //establecemos el nuevo record
-            alert("Felicidades! Te has llevado " + monedasActuales + " monedas, NUEVO RECORD!");
-            window.location.reload()
+           // alert("Felicidades! Te has llevado " + monedasActuales + " monedas, NUEVO RECORD!");
+            Swal.fire({
+                imageUrl: 'img/linkgif.gif',
+                imageHeight: 150,
+                imageAlt: 'link',
+                title: 'Felicidades!',
+                text: "Te has llevado " + monedasActuales + " monedas, NUEVO RECORD!",
+               
+            }).then((result) => {
+                if (result.value) {
+
+                    window.location.reload();
+
+                }
+            });
+
 
         } else if (monedasActuales < record) {
-            alert("Felicidades! Te has llevado " + monedasActuales + " monedas, pero el RECORD ACTUAL es de " + record + " monedas");
-            window.location.reload()
+            //alert("Felicidades! Te has llevado " + monedasActuales + " monedas, pero el RECORD ACTUAL es de " + record + " monedas");
+            Swal.fire({
+                imageUrl: 'img/linkrupee.gif',
+                imageHeight: 150,
+                imageAlt: 'link',
+                title: 'Fin del juego!',
+                html: '<h1>Te has llevado ' + monedasActuales + " monedas, pero el RECORD ACTUAL es de " + record + " monedas</h1>",
+               
+            }).then((result) => {
+                if (result.value) {
+
+                    window.location.reload();
+
+                }
+            });
+
 
         } else if (monedasActuales == record) {
-            alert("Felicidades! Te has llevado " + monedasActuales + " monedas, has igualado el RECORD ACTUAL!");
-            window.location.reload()
+            //alert("Felicidades! Te has llevado " + monedasActuales + " monedas, has igualado el RECORD ACTUAL!");
+            Swal.fire({
+                imageUrl: '/img/linkgif.gif',
+                imageHeight: 150,
+                imageAlt: 'link',
+                title: 'Fin del juego!',
+                text: "Te has llevado " + monedasActuales + " monedas, has igualado el RECORD ACTUAL!",
+               
+            }).then((result) => {
+                if (result.value) {
+
+                    window.location.reload();
+
+                }
+            });
+
 
         }
 
-        
+
 
     }
 
@@ -306,7 +365,7 @@ window.onload = function () {
     }
 
 
-   
+
 
 
 
@@ -319,7 +378,7 @@ window.onload = function () {
         monedaDiv.setAttribute("valor", valorMoneda);
 
         var monedaImg = document.createElement('img');
-        monedaImg.src = "img/moneda.gif";
+        monedaImg.src = "img/rupia.gif";
 
         monedaDiv.appendChild(monedaImg);
 
