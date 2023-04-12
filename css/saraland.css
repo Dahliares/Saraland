@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/mixoutline');
 @import url('https://fonts.cdnfonts.com/css/berenika');
+@import url('https://fonts.cdnfonts.com/css/lilliput-steps');
 
                 
 
@@ -29,7 +30,6 @@ body{
 }
 
 h2{
-font-family: 'berenika', sans-serif;
+    font-family: 'Lilliput Steps', sans-serif;
+
 }
-
-

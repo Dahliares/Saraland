@@ -14,6 +14,9 @@ window.onload = function () {
     var $elementoPortal = crearPortal();
     $casilla.append($elementoPortal);
 
+
+
+
     //insertamos rocas sin Jquery-----------------------------------------------------------------
 
     //recogemos todos los divs en un array
@@ -49,10 +52,27 @@ window.onload = function () {
         }
     }
 
+    //insertamos muerte--------------------------------------------------------------------------
+
+
+    var contadorMuerte = 0;
+
+    while (contadorMuerte < 1) {
+        numAlea = (Math.floor(Math.random() * arrayDivs.length));
+
+        if (!arrayDivs[numAlea].hasChildNodes()) {  //comprobamos que el div no tiene contenido dentro ya
+            var elementoMuerte = crearMuerte();
+            arrayDivs[numAlea].appendChild(elementoMuerte); //div seccionat aleatoriament
+            contadorMuerte++;
+
+        }
+
+    }
+
     //CAMBIAR PERSONAJE----------------------------------------------------------------------------------
 
     var boton = document.getElementsByClassName("change");
-    boton[0].addEventListener("click", cambiarPersonaje);;
+    boton[0].addEventListener("click", cambiarPersonaje);
 
     function cambiarPersonaje() {
 
@@ -194,7 +214,12 @@ window.onload = function () {
 
             portal(casillaActual);
 
+        } else if (casilladestino.firstChild.className == "muerte") {
+
+            muerte();
+
         }
+
 
 
     }
@@ -209,6 +234,7 @@ window.onload = function () {
             document.getElementById("numVides").textContent = vidasActuales - 1;
 
         }
+
         if (vidasActuales == 0) {
             //alert("HAS PERDIDO! Vuelve a empezar");
             Swal.fire({
@@ -217,7 +243,7 @@ window.onload = function () {
                 imageAlt: 'link',
                 title: 'HAS PERDIDO!',
                 text: "Vuelve a empezar y mira por donde andas!",
-               
+
             }).then((result) => {
                 if (result.value) {
 
@@ -226,10 +252,38 @@ window.onload = function () {
                 }
             });
 
-           
+
         }
 
     }
+
+
+    function muerte() {   //gestiona la pérdida de vidas por muerte
+
+        document.getElementById("numVides").textContent = 0;
+        var personaje = document.getElementsByClassName("personatge")[0];//devuelve array  //[0] pq solo hay un personaje 
+        personaje.firstChild.src = "img/deadlink.png";
+
+
+        Swal.fire({
+            imageUrl: 'img/linklose.gif',
+            imageHeight: 150,
+            imageAlt: 'link',
+            title: 'HAS PERDIDO!',
+            text: "Vuelve a empezar y mira por donde andas!",
+
+        }).then((result) => {
+            if (result.value) {
+
+                window.location.reload();
+
+            }
+        });
+
+
+    }
+
+
 
 
     function moneda(casilladestino, casillaActual) {  //sumamos monedas
@@ -263,14 +317,14 @@ window.onload = function () {
         if (Number.isNaN(record) || monedasActuales > record) {
 
             localStorage.setItem("monedas", monedasActuales);  //establecemos el nuevo record
-           // alert("Felicidades! Te has llevado " + monedasActuales + " monedas, NUEVO RECORD!");
+            // alert("Felicidades! Te has llevado " + monedasActuales + " monedas, NUEVO RECORD!");
             Swal.fire({
                 imageUrl: 'img/linkgif.gif',
                 imageHeight: 150,
                 imageAlt: 'link',
                 title: 'Felicidades!',
                 text: "Te has llevado " + monedasActuales + " monedas, NUEVO RECORD!",
-               
+
             }).then((result) => {
                 if (result.value) {
 
@@ -287,8 +341,8 @@ window.onload = function () {
                 imageHeight: 150,
                 imageAlt: 'link',
                 title: 'Fin del juego!',
-                html: '<h1>Te has llevado ' + monedasActuales + " monedas, pero el RECORD ACTUAL es de " + record + " monedas</h1>",
-               
+                html: '<h3>Te has llevado ' + monedasActuales + "  monedas, pero el RECORD ACTUAL es de " + record + " monedas</h3>",
+
             }).then((result) => {
                 if (result.value) {
 
@@ -306,7 +360,7 @@ window.onload = function () {
                 imageAlt: 'link',
                 title: 'Fin del juego!',
                 text: "Te has llevado " + monedasActuales + " monedas, has igualado el RECORD ACTUAL!",
-               
+
             }).then((result) => {
                 if (result.value) {
 
@@ -318,9 +372,9 @@ window.onload = function () {
 
         }
 
-
-
     }
+
+
 
 
     function crearMuñeco() {
@@ -364,6 +418,20 @@ window.onload = function () {
 
     }
 
+    function crearMuerte() {
+
+        var muerteP = document.createElement('p');
+        muerteP.className = "muerte";
+
+        var muerteImg = document.createElement('img');
+        muerteImg.src = "img/muerte.png";
+
+        muerteP.appendChild(muerteImg);
+
+        return muerteP;
+
+    }
+
 
 
 
@@ -384,9 +452,8 @@ window.onload = function () {
 
         return monedaDiv;
 
-
-
     }
+
 
     // mostrar valor de la moneda al hacer doble click con Jquery
 
@@ -418,8 +485,9 @@ window.onload = function () {
                 moverAbajo();
                 break;
         }
+
     };
 
+
+
 }
-
-
