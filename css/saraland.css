@@ -6,7 +6,7 @@
 
 #titulo{
 
-    font-size: 10em;
+    font-size: 5em;
     font-family: 'MixOutline', sans-serif;
     
 }
@@ -29,7 +29,8 @@ body{
                                                 
 }
 
-h2{
-    font-family: 'Lilliput Steps', sans-serif;
+h3{
+    font-family: 'Lilliput Steps', sans-serif;    
+    
 
 }

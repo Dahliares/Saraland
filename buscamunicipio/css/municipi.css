@@ -24,8 +24,9 @@ body, html{
 
 #titol{
     text-align: center;
-    color:black;
-    background-image:url("https://www.shutterstock.com/image-vector/long-city-street-various-urban-260nw-328377722.jpg");
+    color:lightpink;
+  
+  background: slateblue;
 }
 
 #titol h1{
@@ -41,6 +42,8 @@ body, html{
     width: 75%;
     margin-left: 25px;
     cursor: default;
+    border-radius: 10px;
+
    
 }
 
@@ -70,5 +73,5 @@ button{
 body{
 
     background: radial-gradient( slateblue, pink);  
-    background: gra;
+   
 }
