@@ -1,49 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.cdnfonts.com/css/comicool-unicase');
+@import url('https://fonts.cdnfonts.com/css/cloud-2');
 
-body, html{
-    margin:0;
-    padding:0;
-    font-family: 'Montserrat', sans-serif !important;
+.contenedor{
+
+display: grid;
+gap: 1rem;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: repeat(2, 1fr);
+grid-template-areas: "header header header"
+                     "mapa mapa lateral";
+}
+
+.header{
+    grid-area: header;
+    background: radial-gradient( pink, slateblue);  
+    border-radius: 10px;
+   
+}
+
+.mapa{
+
+    grid-area: mapa;
+  
+
+}
+
+.lateral{
+    grid-area: lateral;
+    
 }
 
 
 #quilometres{
     text-align: center;
-    margin-top: 20px;
+    
     color: aliceblue; 
     font-size: xx-large
 }
 
 #lateral{
-    padding:1rem;
-    margin:0 auto;
+    
     background-color: darkmagenta;
     border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    
+    
 }
 
 
 #titol{
     text-align: center;
-    color:lightpink;
+    color:darkmagenta;  
+    padding: 15px;
+    
   
-  background: slateblue;
 }
 
 #titol h1{
-    font-family: 'Rubik Spray Paint', cursive;
+    font-family: 'Comicool Book', sans-serif;
+    
 }
 
 #titol p{
     font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Cloud', sans-serif;
 }
 
 #map { 
-    height: 500px; 
-    width: 75%;
-    margin-left: 25px;
+     height: 500px; 
+     width: 100%;   
     cursor: default;
     border-radius: 10px;
-
    
 }
 
@@ -52,26 +81,56 @@ p{
     color: black;
 }
 
-
+.botones, .municipi-div, .pistas-div {
+    
+    margin: 10px;
+    width: 100%;  
+    font-family: 'Cloud', sans-serif;
+    
+   
+}
 
 button{
+
     height: 50px;
     width: 100px;
-   
+    font-size: larger;
+    color: black;
+    border-radius: 10px;
+    font-family: 'Cloud', sans-serif;
+}
+
+.datos{
+    font-family: 'Cloud', sans-serif;
+    margin: 10px;
+    width: 100%;
 }
 
 #municipi{
 
-    background-color: slateblue;
+    
     color: aquamarine;
     text-align: center;
     font-weight:bold;
+    font-family: 'Cloud', sans-serif;
+    min-height: 40px;
     
 
 }
 
+
+
 body{
 
-    background: radial-gradient( slateblue, pink);  
+    background-color: lightblue;
    
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+                             "mapa mapa mapa"
+                             "lateral lateral lateral"              
+        ; 
+	}
 }
